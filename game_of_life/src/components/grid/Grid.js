@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Cell from "./Cell";
 import Presets from "../presets/Presets";
+import Colors from "../colors/Colors";
 import "./Grid.css";
 import {
   btc_preset,
@@ -49,11 +50,7 @@ class Grid extends Component {
   // Create cells from this.board
   makeCells() {
     let cells_copy = [];
-    // if (this.state.counter == 0) {
-    //   let cells_copy = [...this.state.cells]
-    // } else {
-    //   let cells_copy = []
-    // }
+
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         if (this.board[y][x]) {
@@ -61,7 +58,7 @@ class Grid extends Component {
         }
       }
     }
-    // console.log(`CELLS COPY: ${cells_copy}`);
+
     return cells_copy;
   }
 
@@ -178,6 +175,12 @@ class Grid extends Component {
     });
   };
 
+  BGcolorChanger = arg => {
+    this.setState({
+      gridcolor: arg
+    });
+  };
+
   runIteration() {
     console.log("running iteration");
     let newBoard = this.makeEmptyBoard();
@@ -251,7 +254,7 @@ class Grid extends Component {
           <div
             className='Board'
             style={{
-              background: this.state.gridcolor,
+              backgroundColor: this.state.gridcolor,
               width: this.state.WIDTH,
               height: this.state.HEIGHT,
               backgroundSize: `${this.state.CELL_SIZE}px ${
@@ -304,6 +307,7 @@ class Grid extends Component {
           bitcoin={this.preset1}
           icecream={this.preset4}
         />
+        <Colors colorPicker={this.BGcolorChanger} />
       </div>
     );
   }

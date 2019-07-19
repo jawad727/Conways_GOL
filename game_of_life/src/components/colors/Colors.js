@@ -2,13 +2,28 @@ import React from "react";
 import "./colors.css";
 
 const Colors = props => {
+  const BGCarray = ["red", "green", "orange", "blue"];
+
   return (
     <div className='presetWrapper'>
-      <h2> Presets </h2>
-      <div onClick={props.bitcoin} className='marg' />
-      <div onClick={props.icecream} className='marg' />
-      <div onClick={props.doge} className='marg' />
-      <div onClick={props.corner} className='marg' />
+      <div>
+        <h2> Colors </h2>
+        {BGCarray.map((item, i) => {
+          return (
+            <div
+              style={{ backgroundColor: BGCarray[i] }}
+              onClick={() => {
+                props.colorPicker(BGCarray[i]);
+              }}
+              className='colorsquare'
+            />
+          );
+        })}
+      </div>
+      <div />
+      {/* <div className='colorsquare' />
+      <div className='colorsquare' />
+      <div className='colorsquare' /> */}
     </div>
   );
 };
