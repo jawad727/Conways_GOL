@@ -5,3 +5,11 @@
   margin-top: 35px;
   border-radius: 50%;
 }
+
+.colorsWrapper {
+  display: flex;
+}
+
+.colorStrip {
+  margin-left: 80px;
+}

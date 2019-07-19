@@ -19,7 +19,8 @@ class Grid extends Component {
     WIDTH: 500,
     HEIGHT: 500,
     counter: 0,
-    gridcolor: "#000"
+    gridcolor: "#000",
+    cellColor: "#ccc"
   };
 
   rows = this.state.HEIGHT / this.state.CELL_SIZE;
@@ -181,6 +182,12 @@ class Grid extends Component {
     });
   };
 
+  cellColorChanger = arg => {
+    this.setState({
+      cellColor: arg
+    });
+  };
+
   runIteration() {
     console.log("running iteration");
     let newBoard = this.makeEmptyBoard();
@@ -270,6 +277,7 @@ class Grid extends Component {
           >
             {this.state.cells.map(cell => (
               <Cell
+                cellColor={this.state.cellColor}
                 CELL_SIZE={this.state.CELL_SIZE}
                 x={cell.x}
                 y={cell.y}
@@ -307,7 +315,10 @@ class Grid extends Component {
           bitcoin={this.preset1}
           icecream={this.preset4}
         />
-        <Colors colorPicker={this.BGcolorChanger} />
+        <Colors
+          cellColorChange={this.cellColorChanger}
+          colorPicker={this.BGcolorChanger}
+        />
       </div>
     );
   }

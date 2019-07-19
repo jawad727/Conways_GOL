@@ -3,11 +3,12 @@ import "./colors.css";
 
 const Colors = props => {
   const BGCarray = ["red", "green", "orange", "blue"];
+  const CellColorArray = ["#5CDCCB", "#D2DC5C", "#D05CDC", "#282828"];
 
   return (
-    <div className='presetWrapper'>
-      <div>
-        <h2> Colors </h2>
+    <div className='colorsWrapper'>
+      <div className='colorStrip'>
+        <h2> BG Colors </h2>
         {BGCarray.map((item, i) => {
           return (
             <div
@@ -20,10 +21,20 @@ const Colors = props => {
           );
         })}
       </div>
-      <div />
-      {/* <div className='colorsquare' />
-      <div className='colorsquare' />
-      <div className='colorsquare' /> */}
+      <div className='colorStrip'>
+        <h2> Cell Colors </h2>
+        {BGCarray.map((item, i) => {
+          return (
+            <div
+              style={{ backgroundColor: CellColorArray[i] }}
+              onClick={() => {
+                props.cellColorChange(CellColorArray[i]);
+              }}
+              className='colorsquare'
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
