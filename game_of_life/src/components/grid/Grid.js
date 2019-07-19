@@ -2,172 +2,12 @@ import React, { Component } from "react";
 import Cell from "./Cell";
 import Presets from "../presets/Presets";
 import "./Grid.css";
-
-const smile = [
-  { x: 36, y: 11 },
-  { x: 14, y: 12 },
-  { x: 36, y: 12 },
-  { x: 14, y: 13 },
-  { x: 36, y: 13 },
-  { x: 14, y: 14 },
-  { x: 36, y: 14 },
-  { x: 14, y: 15 },
-  { x: 36, y: 15 },
-  { x: 14, y: 16 },
-  { x: 36, y: 16 },
-  { x: 14, y: 17 },
-  { x: 39, y: 25 },
-  { x: 11, y: 26 },
-  { x: 38, y: 27 },
-  { x: 13, y: 28 },
-  { x: 36, y: 29 },
-  { x: 14, y: 31 },
-  { x: 34, y: 31 },
-  { x: 17, y: 32 },
-  { x: 20, y: 33 },
-  { x: 23, y: 33 },
-  { x: 27, y: 33 },
-  { x: 31, y: 33 }
-];
-
-const btc_preset = [
-  { x: 20, y: 10 },
-  { x: 21, y: 10 },
-  { x: 22, y: 10 },
-  { x: 23, y: 10 },
-  { x: 24, y: 10 },
-  { x: 25, y: 10 },
-  { x: 26, y: 10 },
-  { x: 27, y: 10 },
-  { x: 28, y: 10 },
-  { x: 29, y: 10 },
-  { x: 18, y: 11 },
-  { x: 19, y: 11 },
-  { x: 30, y: 11 },
-  { x: 31, y: 11 },
-  { x: 16, y: 12 },
-  { x: 17, y: 12 },
-  { x: 32, y: 12 },
-  { x: 33, y: 12 },
-  { x: 15, y: 13 },
-  { x: 34, y: 13 },
-  { x: 14, y: 14 },
-  { x: 35, y: 14 },
-  { x: 13, y: 15 },
-  { x: 23, y: 15 },
-  { x: 26, y: 15 },
-  { x: 36, y: 15 },
-  { x: 13, y: 16 },
-  { x: 23, y: 16 },
-  { x: 26, y: 16 },
-  { x: 36, y: 16 },
-  { x: 12, y: 17 },
-  { x: 19, y: 17 },
-  { x: 20, y: 17 },
-  { x: 21, y: 17 },
-  { x: 22, y: 17 },
-  { x: 23, y: 17 },
-  { x: 24, y: 17 },
-  { x: 25, y: 17 },
-  { x: 26, y: 17 },
-  { x: 27, y: 17 },
-  { x: 28, y: 17 },
-  { x: 37, y: 17 },
-  { x: 12, y: 18 },
-  { x: 22, y: 18 },
-  { x: 29, y: 18 },
-  { x: 37, y: 18 },
-  { x: 11, y: 19 },
-  { x: 22, y: 19 },
-  { x: 29, y: 19 },
-  { x: 38, y: 19 },
-  { x: 11, y: 20 },
-  { x: 22, y: 20 },
-  { x: 29, y: 20 },
-  { x: 38, y: 20 },
-  { x: 11, y: 21 },
-  { x: 22, y: 21 },
-  { x: 29, y: 21 },
-  { x: 38, y: 21 },
-  { x: 11, y: 22 },
-  { x: 22, y: 22 },
-  { x: 29, y: 22 },
-  { x: 38, y: 22 },
-  { x: 11, y: 23 },
-  { x: 22, y: 23 },
-  { x: 29, y: 23 },
-  { x: 38, y: 23 },
-  { x: 11, y: 24 },
-  { x: 22, y: 24 },
-  { x: 23, y: 24 },
-  { x: 24, y: 24 },
-  { x: 25, y: 24 },
-  { x: 26, y: 24 },
-  { x: 27, y: 24 },
-  { x: 28, y: 24 },
-  { x: 38, y: 24 },
-  { x: 11, y: 25 },
-  { x: 22, y: 25 },
-  { x: 29, y: 25 },
-  { x: 38, y: 25 },
-  { x: 11, y: 26 },
-  { x: 22, y: 26 },
-  { x: 29, y: 26 },
-  { x: 38, y: 26 },
-  { x: 11, y: 27 },
-  { x: 22, y: 27 },
-  { x: 29, y: 27 },
-  { x: 38, y: 27 },
-  { x: 11, y: 28 },
-  { x: 22, y: 28 },
-  { x: 29, y: 28 },
-  { x: 38, y: 28 },
-  { x: 12, y: 29 },
-  { x: 22, y: 29 },
-  { x: 29, y: 29 },
-  { x: 37, y: 29 },
-  { x: 12, y: 30 },
-  { x: 20, y: 30 },
-  { x: 21, y: 30 },
-  { x: 22, y: 30 },
-  { x: 23, y: 30 },
-  { x: 24, y: 30 },
-  { x: 25, y: 30 },
-  { x: 26, y: 30 },
-  { x: 27, y: 30 },
-  { x: 28, y: 30 },
-  { x: 37, y: 30 },
-  { x: 13, y: 31 },
-  { x: 23, y: 31 },
-  { x: 26, y: 31 },
-  { x: 36, y: 31 },
-  { x: 13, y: 32 },
-  { x: 23, y: 32 },
-  { x: 26, y: 32 },
-  { x: 36, y: 32 },
-  { x: 14, y: 33 },
-  { x: 35, y: 33 },
-  { x: 15, y: 34 },
-  { x: 34, y: 34 },
-  { x: 16, y: 35 },
-  { x: 17, y: 35 },
-  { x: 32, y: 35 },
-  { x: 33, y: 35 },
-  { x: 18, y: 36 },
-  { x: 19, y: 36 },
-  { x: 30, y: 36 },
-  { x: 31, y: 36 },
-  { x: 20, y: 37 },
-  { x: 21, y: 37 },
-  { x: 22, y: 37 },
-  { x: 23, y: 37 },
-  { x: 24, y: 37 },
-  { x: 25, y: 37 },
-  { x: 26, y: 37 },
-  { x: 27, y: 37 },
-  { x: 28, y: 37 },
-  { x: 29, y: 37 }
-];
+import {
+  btc_preset,
+  doge,
+  corner_pattern,
+  icecream
+} from "../presets/preset_arrays";
 
 class Grid extends Component {
   state = {
@@ -177,7 +17,8 @@ class Grid extends Component {
     CELL_SIZE: 10,
     WIDTH: 500,
     HEIGHT: 500,
-    counter: 0
+    counter: 0,
+    gridcolor: "#000"
   };
 
   rows = this.state.HEIGHT / this.state.CELL_SIZE;
@@ -301,10 +142,39 @@ class Grid extends Component {
     });
   };
 
-  handlePreset = () => {
+  preset2 = () => {
+    this.handleClear();
+    doge.forEach(item => {
+      this.board[item.y][item.x] = true;
+    });
+
     this.setState({
-      cells: smile,
-      counter: 0
+      counter: 0,
+      cells: this.makeCells()
+    });
+  };
+
+  preset3 = () => {
+    this.handleClear();
+    corner_pattern.forEach(item => {
+      this.board[item.y][item.x] = true;
+    });
+
+    this.setState({
+      counter: 0,
+      cells: this.makeCells()
+    });
+  };
+
+  preset4 = () => {
+    this.handleClear();
+    icecream.forEach(item => {
+      this.board[item.y][item.x] = true;
+    });
+
+    this.setState({
+      counter: 0,
+      cells: this.makeCells()
     });
   };
 
@@ -381,11 +251,14 @@ class Grid extends Component {
           <div
             className='Board'
             style={{
+              background: this.state.gridcolor,
               width: this.state.WIDTH,
               height: this.state.HEIGHT,
               backgroundSize: `${this.state.CELL_SIZE}px ${
                 this.state.CELL_SIZE
-              }px`
+              }px`,
+              backgroundImage: `linear-gradient(#333 1px, transparent 1px),
+              linear-gradient(90deg, #333 1px, transparent 1px)`
             }}
             onClick={this.handleClick}
             ref={n => {
@@ -425,7 +298,12 @@ class Grid extends Component {
             </button>{" "}
           </div>
         </div>
-        <Presets bitcoin={this.preset1} />
+        <Presets
+          corner={this.preset3}
+          doge={this.preset2}
+          bitcoin={this.preset1}
+          icecream={this.preset4}
+        />
       </div>
     );
   }
