@@ -286,12 +286,13 @@ class Grid extends Component {
             ))}
           </div>
           <div className='controls'>
-            Update every
+           Update every
             <input
               value={this.state.interval}
               onChange={this.handleIntervalChange}
             />{" "}
             msec{" "}
+            <div class="playButtons">
             {this.state.isRunning ? (
               <button className='button' onClick={this.stopGame}>
                 Stop
@@ -301,12 +302,14 @@ class Grid extends Component {
                 Play
               </button>
             )}{" "}
+            
             <button className='button' onClick={this.handleRandom}>
               Random
             </button>{" "}
             <button className='button' onClick={this.handleClear}>
               Clear
             </button>{" "}
+            </div>
           </div>
         </div>
         <Presets
