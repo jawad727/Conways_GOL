@@ -9,6 +9,7 @@ const Colors = props => {
     <div className='colorsWrapper'>
       <div className='colorStrip'>
         <h2> BG Colors </h2>
+        <div className="presetsInnerContainer">
         {BGCarray.map((item, i) => {
           return (
             <div
@@ -21,8 +22,10 @@ const Colors = props => {
           );
         })}
       </div>
+      </div>
       <div className='colorStrip'>
         <h2> Cell Colors </h2>
+        <div className="presetsInnerContainer">
         {BGCarray.map((item, i) => {
           return (
             <div
@@ -34,6 +37,7 @@ const Colors = props => {
             />
           );
         })}
+        </div>
       </div>
     </div>
   );

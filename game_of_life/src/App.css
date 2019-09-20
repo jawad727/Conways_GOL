@@ -22,6 +22,7 @@ body {
 .PageWrapper {
   display: flex;
   justify-content: center;
+
 }
 
 h1 {
@@ -74,4 +75,70 @@ input {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 1500px) {
+
+  .PageWrapper {
+    flex-direction: column-reverse;
+  }
+
+  .rulesWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+
+
+}
+
+@media (max-width: 1250px) {
+
+  .gridWrapper {
+    flex-direction: column;
+  }
+
+  .presetWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  .presetsInnerContainer {
+    display: flex;
+  }
+
+  .presetWrapper3 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+  }
+  
+  .marg {
+    margin-right: 19px;
+  }
+  
+  .colorsWrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .colorStrip {
+    width: 80%;
+    display: flex;
+   justify-content: space-between;
+ 
+    margin-left: 0px;
+  }
+
+  .colorsquare {
+    margin: 10px 10px 10px 10px;
+  }
+
 }
