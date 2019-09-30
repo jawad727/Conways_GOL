@@ -51,3 +51,28 @@
 }
 
 
+
+@media (max-width: 900px) {
+
+  .presetWrapper3 {
+    flex-direction: column;
+  }
+
+  .colorStrip {
+    flex-direction: column;
+  }
+  
+  .presetsInnerContainer {
+    justify-content: center;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+
+  .marg {
+    margin-right: 0px;
+  }
+
+}
