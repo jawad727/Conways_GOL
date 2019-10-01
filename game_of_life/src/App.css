@@ -145,14 +145,29 @@ input {
 
 @media (max-width: 600px) {
 
+  .rulesWrapper {
+    margin: 0px;
+  }
+
   .marg {
-    margin-right: 1px;
+    margin-right: 5px;
   }
 
   .colorsquare {
-    margin: 1px;
+    margin: 5px;
   }
 
+  .presetWrapper3 {
+    width: 95%;
+  }
 
+  .colorStrip {
+    width: 95%;
+  }
+
+  .ruleList li {
+    width: 95%;
+  }
 
 }
+

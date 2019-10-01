@@ -14,7 +14,19 @@
   display: flex;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
 
+    .Board {
+      width: 400px !important;
+      height: 400px !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+
+    .Cell {
+      width: 9px !important;
+      height: 9px !important;
+      
+    }
 
 }
