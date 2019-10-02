@@ -42,6 +42,7 @@ class Grid extends Component {
 
   componentDidMount() {
     console.log(this.state.cells);
+    this.handleRandom()
   }
 
   componentDidUpdate() {
