@@ -145,6 +145,34 @@ input {
 
 @media (max-width: 600px) {
 
+  .presetWrapper {
+    display: none;
+  }
+
+  .colorsquare {
+    width: 80px;
+    height: 80px;
+  }
+
+  .BoardWrapper1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Board {
+    margin: 0px;
+  }
+
+  .controls {
+    margin-right: 0px;
+  }
+
+  .rulesWrapper h2 {
+    margin-bottom: 0px;
+  }
+
   .rulesWrapper {
     margin: 0px;
   }
@@ -168,6 +196,28 @@ input {
   .ruleList li {
     width: 95%;
   }
+  
+}
+
+@media (max-width: 475px) {
+
+  .UpdateInput {
+    width: 150px;
+  }
+
+  .button {
+    padding: 5px 20px;;
+  }
+
+  .rulesWrapper {
+    margin-bottom: 60px;
+  }
 
 }
 
+/* @media (max-width: 425px) {
+  .Board {
+    margin: 0px; 
+  }
+}
+ */

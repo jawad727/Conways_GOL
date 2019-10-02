@@ -42,6 +42,7 @@ class Grid extends Component {
 
   componentDidMount() {
     console.log(this.state.cells);
+    this.handleRandom()
   }
 
   componentDidUpdate() {
@@ -255,7 +256,7 @@ class Grid extends Component {
   render() {
     return (
       <div className='gridWrapper'>
-        <div>
+        <div className="BoardWrapper1">
           <h2>Generation: {this.state.counter}</h2>
           <br />
           <div
@@ -288,6 +289,7 @@ class Grid extends Component {
           <div className='controls'>
            Update every
             <input
+              className="UpdateInput"
               value={this.state.interval}
               onChange={this.handleIntervalChange}
             />{" "}
