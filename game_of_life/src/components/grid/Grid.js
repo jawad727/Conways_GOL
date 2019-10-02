@@ -255,7 +255,7 @@ class Grid extends Component {
   render() {
     return (
       <div className='gridWrapper'>
-        <div>
+        <div className="BoardWrapper1">
           <h2>Generation: {this.state.counter}</h2>
           <br />
           <div
