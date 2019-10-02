@@ -145,6 +145,15 @@ input {
 
 @media (max-width: 600px) {
 
+  .presetWrapper {
+    display: none;
+  }
+
+  .colorsquare {
+    width: 80px;
+    height: 80px;
+  }
+
   .BoardWrapper1 {
     width: 100%;
     display: flex;
@@ -188,8 +197,20 @@ input {
     width: 95%;
   }
   
-  .presetWrapper {
-    display: none;
+}
+
+@media (max-width: 475px) {
+
+  .UpdateInput {
+    width: 150px;
+  }
+
+  .button {
+    padding: 5px 20px;;
+  }
+
+  .rulesWrapper {
+    margin-bottom: 60px;
   }
 
 }

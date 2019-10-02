@@ -288,6 +288,7 @@ class Grid extends Component {
           <div className='controls'>
            Update every
             <input
+              className="UpdateInput"
               value={this.state.interval}
               onChange={this.handleIntervalChange}
             />{" "}
