@@ -23,10 +23,20 @@
       overflow: hidden;
     }
 
-    .Cell {
+    /* .Cell {
       width: 9px !important;
       height: 9px !important;
       
-    }
+    } */
+
+}
+
+@media (max-width: 425px) {
+
+  .Board {
+    width: 320px !important;
+    height: 320px !important;
+
+  }
 
 }

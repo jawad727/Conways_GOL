@@ -215,9 +215,20 @@ input {
 
 }
 
-/* @media (max-width: 425px) {
-  .Board {
-    margin: 0px; 
+@media (max-width: 705px) {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0px;
   }
 }
- */
+
+@media (max-width: 450px) {
+  .colorsquare {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
