@@ -232,3 +232,13 @@ input {
     font-size: 2.5rem;
   }
 }
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .UpdateInput {
+    width: 120px;
+  }
+}
